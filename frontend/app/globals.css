@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  min-width: 320px;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 5px black;
+}
+
+.text-shadow-white {
+  text-shadow: 1px 1px 5px white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.spinner-box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.circle-border {
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    0deg,
+    rgba(248, 235, 48, 0.918) 33%,
+    rgb(243, 36, 0) 100%
+  );
+  animation: spin 2s linear 0s infinite;
+}
