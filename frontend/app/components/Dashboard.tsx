@@ -7,11 +7,11 @@ import { destroyCookie } from "nookies";
 import { success } from "../functions/toast";
 
 type Props = {
-  children: { name: string; element: React.ReactNode; string: string }[];
+  item: { name: string; element: React.ReactNode; string: string }[];
 };
 
 export default function Dashboard(props: Props) {
-  const { name, element, string } = props.children[0];
+  const { name, element, string } = props.item[0];
   const [nome, setNome] = useState(name);
   const [el, setEl] = useState(element);
   const [str, setStr] = useState(string);
@@ -19,9 +19,9 @@ export default function Dashboard(props: Props) {
   const router = useRouter();
 
   const handle = (index: number) => {
-    setNome(props.children[index].name);
-    setEl(props.children[index].element);
-    setStr(props.children[index].string);
+    setNome(props.item[index].name);
+    setEl(props.item[index].element);
+    setStr(props.item[index].string);
   };
 
   const handleNav = (e: any) => {

@@ -5,7 +5,7 @@ import { children } from "../constants/dashboardElements";
 export default function Home() {
   return (
     <>
-      <Dashboard children={children} />
+      <Dashboard item={children} />
     </>
   );
 }
